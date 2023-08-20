@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.webcomponentsrenderer.WebComponentsRenderer" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Web Components Renderer</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="webComponentTag" type="string" required="false">
+                <caption>html tag name</caption>
+                <description>Custom Element Tag Name </description>
+            </property>
+            <property key="webComponentsAttributes" type="object" isList="true">
+                <caption>Component Attributes</caption>
+                <description></description>
+                <properties>
+                    <property key="atrributeName" type="string" defaultValue="attribute-name">
+                        <caption>Atrribute Name</caption>
+                        <category>Data source</category>
+                        <description>Web Componenet Attribute Name</description>
+                    </property>
+                    <property key="attributeValue" type="attribute">
+                        <caption>Atrribute Value</caption>
+                        <category>Data source</category>
+                        <description></description>
+                        <attributeTypes>
+                            <attributeType name="String" />
+                        </attributeTypes>
+                    </property>
+                </properties>
+            </property>
+            <!-- list -->
+            <property key="doseItHasListAttribute" type="boolean" defaultValue="false">
+                <caption>Dose It Has List Attribute?</caption>
+                <description></description>
+            </property>
+            <property key="webComponentsList" type="datasource" required="false" isList="true">
+                <caption>List object</caption>
+                <description></description>
+            </property>
+            <!-- <property key="ListName" type="string" defaultValue="attribute-name">
+                <caption>List Name</caption>
+                <category>Data source</category>
+                <description>Web Componenet List Name</description>
+            </property> -->
+            <property key="listAttribute1" type="attribute" required="true" dataSource="webComponentsList">
+                <caption>Web Components attribute</caption>
+                <description>Choose the list of attributes from the entity</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="listAttribute2" type="attribute" required="true" dataSource="webComponentsList">
+                <caption>Web Components attribute</caption>
+                <description>Choose the list of attributes from the entity</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
