@@ -39,11 +39,6 @@
                 <caption>List object</caption>
                 <description></description>
             </property>
-            <!-- <property key="ListName" type="string" defaultValue="attribute-name">
-                <caption>List Name</caption>
-                <category>Data source</category>
-                <description>Web Componenet List Name</description>
-            </property> -->
             <property key="listAttribute1" type="attribute" required="true" dataSource="webComponentsList">
                 <caption>Web Components attribute</caption>
                 <description>Choose the list of attributes from the entity</description>
